@@ -1,0 +1,18 @@
+
+
+<div class="container">
+
+  <div class="card col-md-2 position-absolute top-50 start-50 translate-middle texte-center text-dark p-3">
+  <div class="card-body">
+      <h1 class="card-title">Calcule seu IMC</h1>
+      <label for="altura" class="mt-1 mb-1">Altura:</label>
+        <input [(ngModel)]="altura" type="number" placeholder="Informe sua altura em metros" class="form-control">
+        <label for="peso" class="mt-1 mb-1">Peso:</label>
+        <input [(ngModel)]="peso" type="number" placeholder="Informe seu peso em kg" class="form-control">
+        <button (click)="calculo()" class="btn btn-info mt-3 text-white">Calcular</button>
+        <button (click)="limpar()" class="btn btn-warning mt-3 text-white ">Limpar</button>
+          <p *ngIf="imc" id="btn-calc" class="alert alert-success mt-2"> Seu IMC é {{imc.toFixed(2)}} {{result}}</p>
+
+</div>
+</div>
+</div>
